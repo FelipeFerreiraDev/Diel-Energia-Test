@@ -1,0 +1,55 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Diel Energia API",
+      "description": "This is an API for Diel Energia produced for its selection process",
+      "version": "1.0.0",
+      "contact": {
+        "email": "felipeferreira.sp.dev@gmail.com"
+      }
+    },
+    "paths": {
+      "/sessions": {
+        "post": {
+          "tags": ["Sessions"],
+          "summary": "Authentication user",
+          "description": "Authentication user",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success"
+            },
+            "400": {
+              "description": "Email or password incorrect!"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {},
+    "components": {
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    }
+  }
