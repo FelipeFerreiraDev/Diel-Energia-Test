@@ -5,7 +5,6 @@
     "rootDir": "./",
     "baseUrl": "./src",
     "outDir": "./dist",
-    "strict": false,
     "paths": {
       "@modules/*": ["modules/*"],
       "@config/*": ["config/*"],
@@ -19,5 +18,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
-  }
+  },
+  "include": ["src", ".eslintrc.json"],
 }
