@@ -6,4 +6,11 @@ interface ICreateTaskDTO {
   user_id: string
 }
 
-export { ICreateTaskDTO }
+interface IUpdateTaskDTO {
+  title?: string
+  description?: string
+  date?: Date
+  runtime?: string
+}
+
+export { ICreateTaskDTO, IUpdateTaskDTO }

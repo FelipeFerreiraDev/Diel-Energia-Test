@@ -1,4 +1,4 @@
-import { ICreateTaskDTO } from '@modules/tasks/dtos/ICreateTaskDTO'
+import { ICreateTaskDTO, IUpdateTaskDTO } from '@modules/tasks/dtos/ICreateTaskDTO'
 import { ITasksRepository } from '@modules/tasks/repositories/ITasksRepository'
 import { getRepository, Repository } from 'typeorm'
 
@@ -37,6 +37,26 @@ class TasksRepository implements ITasksRepository {
     })
 
     return task
+  }
+
+  async updateById ({
+    title,
+    description,
+    date,
+    runtime
+  }: IUpdateTaskDTO): Promise<Task> {
+    const task = await this.repository.save({
+      title,
+      description,
+      date,
+      runtime
+    })
+
+    return task
+  }
+
+  async deleteById (task_id: string): Promise<void> {
+    await this.repository.delete(task_id)
   }
 }
 
