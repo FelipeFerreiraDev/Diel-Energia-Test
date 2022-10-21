@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import { container } from 'tsyringe'
-import { ListTaskByUserUseCase } from './ListActivityByUserUseCase'
+import { ListTaskByUserUseCase } from './ListTaskByUserUseCase'
 
 class ListTaskByUserController {
   async handle (request: Request, response: Response): Promise<Response> {

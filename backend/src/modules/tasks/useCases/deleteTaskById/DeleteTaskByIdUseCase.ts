@@ -11,7 +11,7 @@ class DeleteTaskUseCase {
   ) {}
 
   async execute (task_id: string): Promise<void> {
-    const task = await this.tasksRepositories.findTaskById(task_id)
+    const task = await this.tasksRepositories.findById(task_id)
 
     if (!task) {
       throw new AppError('Task not found')

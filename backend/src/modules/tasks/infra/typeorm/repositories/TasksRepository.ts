@@ -26,7 +26,7 @@ class TasksRepository implements ITasksRepository {
     return task
   }
 
-  async findTaskById (task_id: string): Promise<Task> {
+  async findById (task_id: string): Promise<Task> {
     const task = await this.repository.findOne(task_id)
 
     return task
@@ -67,6 +67,14 @@ class TasksRepository implements ITasksRepository {
 
   async deleteById (task_id: string): Promise<void> {
     await this.repository.delete(task_id)
+  }
+
+  async findByTitle (title: string, user_id: string): Promise<Task[]> {
+    const task = (await this.repository.find({
+      where: { user_id }
+    })).filter(t => t.title.startsWith(title))
+
+    return task
   }
 }
 
