@@ -4,7 +4,7 @@
     "host": "localhost",
     "username": "postgres",
     "password": "docker",
-    "database": "diel",
+    "database": "postgres",
     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
     "cli": {
         "migrationsDir": "./src/shared/infra/typeorm/migrations"

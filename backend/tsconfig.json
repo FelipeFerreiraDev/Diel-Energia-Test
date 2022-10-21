@@ -2,8 +2,8 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "rootDir": "./",
-    "baseUrl": "./src",
+    "rootDir": "src",
+    "baseUrl": "src",
     "outDir": "./dist",
     "paths": {
       "@modules/*": ["modules/*"],
