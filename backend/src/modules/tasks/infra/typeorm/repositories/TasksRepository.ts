@@ -1,4 +1,5 @@
-import { ICreateTaskDTO, IUpdateTaskDTO } from '@modules/tasks/dtos/ICreateTaskDTO'
+import { ICreateTaskDTO } from '@modules/tasks/dtos/ICreateTaskDTO'
+import { IUpdateTaskDTO } from '@modules/tasks/dtos/IUpdatedTaskDTO'
 import { ITasksRepository } from '@modules/tasks/repositories/ITasksRepository'
 import { getRepository, Repository } from 'typeorm'
 
