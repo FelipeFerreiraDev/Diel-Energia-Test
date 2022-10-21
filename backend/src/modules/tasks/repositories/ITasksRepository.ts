@@ -1,4 +1,5 @@
-import { ICreateTaskDTO, IUpdateTaskDTO } from '../dtos/ICreateTaskDTO'
+import { ICreateTaskDTO } from '../dtos/ICreateTaskDTO'
+import { IUpdateTaskDTO } from '../dtos/IUpdatedTaskDTO'
 import { Task } from '../infra/typeorm/entities/Task'
 
 interface ITasksRepository {

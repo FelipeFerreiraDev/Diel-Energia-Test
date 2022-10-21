@@ -41,17 +41,26 @@ class TasksRepository implements ITasksRepository {
   }
 
   async updateById ({
+    task_id,
     title,
     description,
     date,
     runtime
   }: IUpdateTaskDTO): Promise<Task> {
-    const task = await this.repository.save({
-      title,
-      description,
-      date,
-      runtime
-    })
+    if (title) {
+      await this.repository.update(task_id, { title })
+    }
+    if (description) {
+      await this.repository.update(task_id, { description })
+    }
+    if (date) {
+      await this.repository.update(task_id, { date })
+    }
+    if (runtime) {
+      await this.repository.update(task_id, { runtime })
+    }
+
+    const task = await this.repository.findOne(task_id)
 
     return task
   }
