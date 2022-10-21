@@ -5,6 +5,8 @@ import { UsersTokensRepository } from '@modules/accounts/infra/typeorm/repositor
 import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository'
 import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTokensRepository'
 import { container } from 'tsyringe'
+import { ITasksRepository } from '@modules/tasks/repositories/ITasksRepository'
+import { TasksRepository } from '@modules/tasks/infra/typeorm/repositories/TasksRepository'
 
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
@@ -14,4 +16,9 @@ container.registerSingleton<IUsersRepository>(
 container.registerSingleton<IUsersTokensRepository>(
   'UsersTokensRepository',
   UsersTokensRepository
+)
+
+container.registerSingleton<ITasksRepository>(
+  'TasksRepository',
+  TasksRepository
 )
