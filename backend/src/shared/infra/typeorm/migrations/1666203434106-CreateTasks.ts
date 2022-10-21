@@ -28,9 +28,23 @@ export class CreateTasks1666203434106 implements MigrationInterface {
             type: 'varchar'
           },
           {
+            name: 'user_id',
+            type: 'uuid'
+          },
+          {
             name: 'created_at',
             type: 'timestamp',
             default: 'now()'
+          }
+        ],
+        foreignKeys: [
+          {
+            name: 'FKUserTask',
+            referencedTableName: 'users',
+            referencedColumnNames: ['id'],
+            columnNames: ['user_id'],
+            onDelete: 'CASCADE',
+            onUpdate: 'CASCADE'
           }
         ]
       })
