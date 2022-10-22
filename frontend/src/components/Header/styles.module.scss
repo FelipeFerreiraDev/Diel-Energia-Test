@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 2rem;
+  height: 4rem;
+  background-color: var(--gray-800);
+  color: white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.logo {
+  width: 300px;
+  font-weight: bold;
+
+
+  span {
+    color: var(--blue-500);
+  }
+}
+
+.login {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 9px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+
+  transition: ease 0.2s;
+
+  &:hover {
+    background-color: var(--blue-500);
+    border: 1px solid var(--blue-500);
+    color: var(--white);
+    transition: ease 0.2s;
+  }
+}

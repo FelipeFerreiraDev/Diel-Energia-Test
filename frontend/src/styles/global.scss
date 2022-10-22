@@ -12,17 +12,20 @@
     --gray-200: #AFB2B1;
     --gray-300: #A8A8B3;
     --gray-500: #808080;
-    --gray-800: #494D4B;
+    --gray-800: #282c34;
     --gray-900: #121214;
+
+    --blue-500: #405AC4;
+    --blue-900: #191A42;
 
     --cyan-500: #61DAFB;
     --yellow-500: #EBA417;
-    
+
 }
 
 body {
-    background: var(--gray-900);
-    color: var(--white);
+    background: var(--gray-50);
+    color: var(--gray-900);
 }
 
 body, input, textarea, select, button {
