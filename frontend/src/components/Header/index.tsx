@@ -9,7 +9,7 @@ export default function Header() {
           diel <span>Tasks</span>
         </h1>
       </div>
-      <Link to="/" className={style.login}>
+      <Link to="/login" className={style.login}>
         login
       </Link>
     </header>
