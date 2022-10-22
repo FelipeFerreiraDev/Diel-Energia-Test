@@ -4,11 +4,13 @@ import style from './styles.module.scss';
 export default function Header() {
   return (
     <header className={style.header}>
-      <div className={style.logo}>
-        <h1>
-          diel <span>Tasks</span>
-        </h1>
-      </div>
+      <Link to="/">
+        <div className={style.logo}>
+          <h1>
+            diel <span>Tasks</span>
+          </h1>
+        </div>
+      </Link>
       <Link to="/login" className={style.login}>
         login
       </Link>
