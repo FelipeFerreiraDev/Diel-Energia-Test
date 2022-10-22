@@ -1,7 +1,11 @@
-export default function Header() {
+import style from './styles.module.scss';
+
+export default function Footer() {
   return (
     <footer>
-      <div />
+      <div className={style.copyright}>
+        <p>© 2022 - All Rights Reserved</p>
+      </div>
     </footer>
   );
 }
