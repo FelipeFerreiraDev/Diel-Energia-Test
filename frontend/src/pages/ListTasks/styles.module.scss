@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 3rem 0px 3rem;
+}
+
+.containerTasks {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 2rem 3rem 2rem 3rem;
+}
+
+.title {
+  color: var(--blue-500);
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    transform: translate(0%, 50%);
+    background-color: var(--blue-500);
+    width: 60%;
+  }
+}
