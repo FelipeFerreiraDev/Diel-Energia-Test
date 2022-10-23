@@ -43,6 +43,7 @@
         "@typescript-eslint/no-unused-vars":"error",
         "react/require-default-props": "off",
         "@typescript-eslint/no-misused-promises": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off"
     }
 }
