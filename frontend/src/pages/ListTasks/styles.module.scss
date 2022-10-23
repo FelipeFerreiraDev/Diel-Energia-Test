@@ -34,3 +34,22 @@
     width: 60%;
   }
 }
+
+.busca {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  svg {
+    color: var(--blue-500);
+
+    &:hover {
+      cursor: pointer;
+      filter: brightness(0.8);
+    }
+  }
+}
