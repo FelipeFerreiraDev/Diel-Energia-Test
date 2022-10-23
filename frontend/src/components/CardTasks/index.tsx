@@ -1,30 +1,44 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import { Link } from 'react-router-dom';
 import { limitDescription } from '../../utils/limitDescription';
 import style from './style.module.scss';
 
-export default function CardTasks() {
+interface Tasks {
+  id: string;
+  title: string;
+  description: string;
+  date: Date;
+  runtime: string;
+}
+
+export default function CardTasks({
+  id,
+  title,
+  description,
+  date,
+  runtime,
+}: Tasks) {
+  const titleUpper = title[0].toUpperCase() + title.slice(1);
+
   return (
     <div className={style.card}>
-      <h1>Lavar o cabelo</h1>
+      <h1>{titleUpper}</h1>
       <hr />
       <div className={style.description}>
-        <p>
-          {limitDescription(
-            'Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido Eu tenho que lavar o cabelo, pois ele está sujo e fedido'
-          )}
-        </p>
+        <p>{limitDescription(description)}</p>
       </div>
       <div className={style.info}>
         <p className={style.date}>
-          Data de realização: <span>10/10/2021</span>
+          Data de realização: <span>{`${date.toString()}`}</span>
         </p>
         <p className={style.date}>
-          Horário de realização: <span>20h32min</span>
+          Horário de realização: <span>{date.toString()}</span>
         </p>
         <p>
-          Tempo de execução: <span>2 horas</span>
+          Tempo de execução: <span>{runtime}</span>
         </p>
-        <Link to="/">Ver mais</Link>
+        <Link to={`/editar-task/${id}`}>Ver mais</Link>
       </div>
     </div>
   );
