@@ -8,13 +8,20 @@ export default function Cadastrar() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmationPasssword, setConfirmationPassword] = useState('');
+  const [response, setResponse] = useState('');
 
   async function handleCreateAccount() {
-    const a = await api.post('/users', {
+    const data = await api.post('/users', {
       name,
       email,
       password,
     });
+
+    if (data.status === 201) {
+      setResponse('Conta criada com sucesso!');
+    } else {
+      setResponse('Erro ao criar conta');
+    }
   }
 
   return (
@@ -64,6 +71,7 @@ export default function Cadastrar() {
           Confirmar
         </button>
       </form>
+      <div className={style.response}>{response}</div>
     </div>
   );
 }
