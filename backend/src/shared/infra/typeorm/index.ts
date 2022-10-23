@@ -6,7 +6,7 @@ export default async (host = 'localhost'): Promise<Connection> => {
   return createConnection(
     Object.assign(defaultOptions, {
       host: 'localhost',
-      database: 'diel'
+      database: 'postgres'
     })
   )
 }
