@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { useState } from 'react';
 import TextInput from '../../components/TextInput';
@@ -9,12 +11,15 @@ export default function Login() {
   const [password, setPassword] = useState('');
 
   async function handleSubmit() {
-    const a = await api.post('/sessions', {
+    const data = await api.post('/sessions', {
       email,
       password,
     });
 
-    console.log(a);
+    localStorage.setItem('token', data.data.token);
+    localStorage.setItem('user', JSON.stringify(data.data.user));
+
+    window.location.href = '/list-tasks';
   }
 
   return (
