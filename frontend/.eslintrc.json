@@ -40,6 +40,9 @@
         "react/react-in-jsx-scope":"off",
         "prettier/prettier":"error",
         "@typescript-eslint/comma-dangle":"off",
-        "@typescript-eslint/no-unused-vars":"error"
+        "@typescript-eslint/no-unused-vars":"error",
+        "react/require-default-props": "off",
+        "@typescript-eslint/no-misused-promises": "off",
+        "react/jsx-props-no-spreading": "off"
     }
 }
