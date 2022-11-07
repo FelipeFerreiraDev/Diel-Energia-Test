@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-floating-promises */
-import { FilePlus, PlusCircle } from 'phosphor-react';
+import { PlusCircle } from 'phosphor-react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CardTasks from '../../components/CardTasks';
